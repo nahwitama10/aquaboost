@@ -1,10 +1,15 @@
+"use client"
+
+import { motion } from "framer-motion"
 import Image from "next/image"
 
 export default function Hero() {
   return (
-    <section className="bg-black text-white min-h-screen">
+    <section className="bg-black text-white min-h-screen pt-28">
 
       <div className="max-w-7xl mx-auto px-8 py-20 grid md:grid-cols-2 gap-10 items-center">
+        {/* GLOW EFFECT */}
+        <div className="absolute w-[400px] h-[400px] bg-red-600/30 blur-[120px] rounded-full"></div>
 
         {/* LEFT CONTENT */}
         <div>
@@ -45,20 +50,29 @@ export default function Hero() {
 
         {/* RIGHT SIDE IMAGES */}
         <div className="relative flex flex-col items-center gap-8">
+          <motion.div
+            animate={{ y: [0, -10, 0] }}
+            transition={{ duration: 4, repeat: Infinity }}
+          >
+            <Image
+              src="/redmaggot.jpg"
+              width={350}
+              height={350}
+              alt="AquaBoost Product"
+            />
+          </motion.div>
 
-          <Image
-            src="/redmaggot.jpg"
-            width={350}
-            height={350}
-            alt="AquaBoost Product"
-          />
-
-          <Image
-            src="/redfish.jpg"
-            width={350}
-            height={250}
-            alt="Red Fish"
-          />
+          <motion.div
+            animate={{ y: [0, -10, 0] }}
+            transition={{ duration: 4, repeat: Infinity }}
+          >
+            <Image
+              src="/redfish.jpg"
+              width={350}
+              height={250}
+              alt="Red Fish"
+            />
+          </motion.div>
 
         </div>
 

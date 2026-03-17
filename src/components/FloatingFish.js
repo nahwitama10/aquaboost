@@ -30,7 +30,7 @@ export default function FloatingFish() {
       {/* Fish 2 */}
       <motion.div
         style={{ y: y2, opacity}}
-        className="absolute top-[500px] right-20"
+        className="absolute top-[500px] right-20 z-0"
         animate={{ x: [0, -20, 0] }}
         transition={{ duration: 6, repeat: Infinity }}        
       >

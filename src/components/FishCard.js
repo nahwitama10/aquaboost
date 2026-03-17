@@ -17,7 +17,7 @@ export default function FishCard({ name, image }) {
       transition={{ type: "spring", stiffness: 200, duration: 0.5 }}
       viewport={{ once: true }}
       className="bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-6 text-center shadow-lg 
-                 hover:shadow-red-500/30 transform-gpu"
+           hover:shadow-red-500/30 transform-gpu relative overflow-hidden"
     >
 
       <Image

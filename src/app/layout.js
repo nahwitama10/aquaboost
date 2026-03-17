@@ -1,24 +1,15 @@
-import Hero from "@/components/sections/Hero"
-import Benefits from "@/components/sections/Benefits"
-import ProductSpotlight from "@/components/sections/ProductSpotlight"
-import FishShowcase from "@/components/sections/FishShowcase"
 import "./globals.css"
+import Navbar from "@/components/Navbar"
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="bg-black text-white relative overflow-x-hidden">
 
+        <Navbar />
+
         <main>
-
-          <Hero />
-
-          <Benefits />
-
-          <ProductSpotlight />
-
-          <FishShowcase />
-
+          {children}
         </main>
 
       </body>
